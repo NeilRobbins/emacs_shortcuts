@@ -66,9 +66,10 @@
         <div class="row">
           <div class="span3 bs-docs-sidebar">
             <ul class="nav nav-list bs-docs-sidenav">
-              <li class="active"><a href="#file"><i class="icon-chevron-right"></i> File</a></li>
-              <li><a href="#cursorMovement"><i class="icon-chevron-right"></i>
-                  Cursor Movement</a></li>
+              <li class="active"><a href="#help"><i class="icon-chevron-right"></i>Help</a></li>
+              <li><a href="#file"><i class="icon-chevron-right"></i> File</a></li>
+              <li><a href="#pointMovement"><i class="icon-chevron-right"></i>
+                  Point Movement</a></li>
               <li><a href="#window"><i class="icon-chevron-right"></i> Window</a></li>
               <li><a href="#registers"><i class="icon-chevron-right"></i>
                   Registers</a></li>
@@ -76,9 +77,52 @@
             </ul>
           </div>
           <div class="span8">
+            <section id="help">
+              <div class="well">
+                <h2>Help</h2>
+                <p>A great way to get to know what does what in emacs is to use the help</p>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Command Description</th>
+                      <th>Key Sequence</th>
+                    </tr>
+                    <tbody>
+                      <tr><td>View Help Options</td><td>Ctrl-h, ?</td></tr>
+                      <tr><td>View the Emacs manual</td><td>Ctrl-h, i</td></tr>
+                      <tr><td>View the documentation of the current
+                      Major Mode</td><td>Ctrl-h, m</td></tr>
+                      <tr><td>View current key
+                          bindings</td><td>Ctrl-h, b</td></tr>
+                    </tbody>
+                  </thead>
+                </table>
+              </div>
+            </section>
             <section id="file">
               <div class="well">
-              <h2>File</h2>
+                <h2>File</h2>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Command Description</th>
+                      <th>Key Sequence</th>
+                    </tr>
+                    <tbody>
+                      <tr><td>Open</td><td>Ctrl-x, Ctrl-f</td></tr>
+                      <tr><td>Save</td><td>Ctrk-x, Ctrl-s</td></tr>
+                      <tr><td>Save As</td><td>Ctrl-x, Ctrl-w</td></tr>
+                    </tbody>
+                  </thead>
+                </table>
+              </div>
+            </section>
+            <section id="pointMovement">
+              <div class="well">
+              <h2>Point Movement</h2>
+              <p>In emacs what in other software might be called the
+              caret, or the cursor, is called the 'point'.</p>
+              <h3>Moving the point to specified locations</h3>
               <table class="table">
                 <thead>
                   <tr>
@@ -86,17 +130,20 @@
                     <th>Key Sequence</th>
                   </tr>
                   <tbody>
-                    <tr><td>Open</td><td>Ctrl-x, Ctrl-f</td></tr>
-                    <tr><td>Save</td><td>Ctrk-x, Ctrl-s</td></tr>
-                    <tr><td>Save As</td><td>Ctrl-x, Ctrl-w</td></tr>
+                    <tr><td>Go to line</td><td>Meta-g,
+                    g</td></tr>
+                    <tr><td>Save the point position in a
+                        register</td><td>Ctrl-x, r,
+                        Space, <i>#register_number</i></td></tr>
+                    <tr><td>Jump to a point position saved in a
+                        register</td><td>Ctrl-x, r,
+                        j, <i>#register_number</i></td></tr>
+                    <tr><td>Go to top of Buffer</td><td>Meta-&lt;</td></tr>
+                    <tr><td>Go to end of Buffer</td><td>Meta-&gt;</td></tr>
                   </tbody>
                 </thead>
               </table>
-              </div>
-            </section>
-            <section id="cursorMovement">
-              <div class="well">
-              <h2>Cursor Movement</h2>
+              <h3>Moving the point relative to current location</h3>
               <table class="table">
                 <thead>
                   <tr>
@@ -113,9 +160,6 @@
                     <tr><td>Backward</td><td>Meta-}</td></tr>
                     <tr><td rowspan="2">Page</td><td>Forward</td><td>Ctrl-V</td></tr>
                     <tr><td>Backward</td><td>Meta-V</td></tr>
-                    <tr><td rowspan="2">Whole Buffer</td><td>Start</td><td>Meta-&lt;</td></tr>
-                    <tr><td>End</td><td>Meta-&gt;</td></tr>
-                    <tr><td>Go to line</td><td>N/A</td><td>Meta-g, g</td></tr>
                   </tbody>
                 </thead>
               </table>
@@ -134,7 +178,11 @@
                     <tr><td>Close</td><td>Ctrl-x, k</td></tr>
                     <tr><td>Offer each buffer in turn to be closed</td><td>Meta-x kill-some-buffers</td></tr>
                     <tr><td>Select buffer</td><td>Ctrl-x, b <i>buffer_name</i></td></tr>
-                    <tr><td>Move to next buffer</td><td>Ctrl-x, o</td></tr>
+                    <tr><td>Move to next buffer</td><td>Ctrl-x,
+                    o</td></tr>
+                    <tr><td>Move to next buffer</td><td>Ctrl-x, <i>Right Arrow</i></td></tr>
+                    <tr><td>Move to previous
+                        buffer</td><td>Ctrl-x, <i>Left Arrow</i></td></tr>
                     <tr><td>Vertically split window &amp; select from buffers</td><td>Ctrl-x, Ctrl-b</td>
                     <tr><td>Maximise window</td><td>Ctrl-x, 1</td></tr>
                     <tr><td>Split window horizontally</td><td>Ctrl-x, 2</td></tr>
@@ -176,11 +224,13 @@
                     </tr>
                     <tbody>
                       <tr><td>Undo</td><td>Ctrl-x, u</td></tr>
-                      <tr><td>Begin Selection</td><td>Ctrl-Space</td></tr>
+                      <tr><td>Begin Selection (set
+                      mark)</td><td>Ctrl-Space</td></tr>
+                      <tr><td>Exchange point and mark</td><td>Ctrl-x, Ctrl-x</td></tr>
                       <tr><td>Cancel Selection</td><td>Ctrl-g</td></tr>
                       <tr><td>Cut Selection</td><td>Ctrl-w</td></tr>
                       <tr><td>Cut Line</td><td>Ctrl-k</td></tr>
-                      <tr><td>Paste (Yank)</td><td>Ctrl-y</td></tr>                      
+                      <tr><td>Paste (Yank)</td><td>Ctrl-y</td></tr>                 
                       <tr><td>Copy selection to
                       register</td><td>Ctrl-x, r, s, <i>#register_number</i></td></tr>
                       <tr><td>Paste (insert) from
