@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Emacs Shortcuts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Provides shortcuts useful in emacs">
+    <meta name="author" content="Neil Robbins">
+    
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+      }
+      .sidebar-nav {
+      padding: 9px 0;
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="canonical" href="http://neilrobbins.github.com/emacs_shortcuts/" />
+    
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <script type="text/javascript">
+      
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3944551-9']);
+      _gaq.push(['_trackPageview']);
+      
+      (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+      })();
+      
+    </script>
+    <script src="http://platform.linkedin.com/in.js"
+            type="text/javascript">
+    </script>
+    <style type="text/css">
+      /*
+      Liberated from Bootstrap's documentation styles
+      I take no credit, I like coding, not CSSing
+      */
+      
+      /* Body and structure
+      -------------------------------------------------- */
+      body {
+      position: relative;
+      padding-top: 40px;
+      }
+      
+      /* Tweak navbar brand link to be super sleek
+      -------------------------------------------------- */
+      
+      body > .navbar {
+      font-size: 13px;
+      }
+      
+      /* Change the docs' brand */
+      body > .navbar .brand {
+      padding-right: 0;
+      padding-left: 0;
+      margin-left: 20px;
+      float: right;
+      font-weight: bold;
+      color: #000;
+      text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
+      -webkit-transition: all .2s linear;
+      -moz-transition: all .2s linear;
+      transition: all .2s linear;
+      }
+      body > .navbar .brand:hover {
+      text-decoration: none;
+      text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
+      }
+
+
+      /* Sections
+      -------------------------------------------------- */
+      
+      /* padding for in-page bookmarks and fixed navbar */
+      section {
+      padding-top: 30px;
+      }
+      section > .page-header,
+      section > .lead {
+      color: #5a5a5a;
+      }
+      section > ul li {
+      margin-bottom: 5px;
+      }
+      
+      /* Separators (hr) */
+      .bs-docs-separator {
+      margin: 40px 0 39px;
+      }
+      
+      /* Faded out hr */
+      hr.soften {
+      height: 1px;
+      margin: 70px 0;
+      background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+      background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+      background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+      background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+      border: 0;
+      }
+
+      /* Footer
+      -------------------------------------------------- */
+      
+      .footer {
+      padding: 70px 0;
+      margin-top: 70px;
+      border-top: 1px solid #e5e5e5;
+      background-color: #f5f5f5;
+      }
+      .footer p {
+      margin-bottom: 0;
+      color: #777;
+      }
+      .footer-links {
+      margin: 10px 0;
+      }
+      .footer-links li {
+      display: inline;
+      margin-right: 10px;
+      }
+
+      /* Desktop
+      ------------------------- */
+      @media (max-width: 980px) {
+      /* Unfloat brand */
+      body > .navbar-fixed-top .brand {
+      float: left;
+      margin-left: 0;
+      padding-left: 10px;
+      padding-right: 10px;
+      }
+
+      /* Tablet
+      ------------------------- */
+      @media (max-width: 768px) {
+      /* Remove any padding from the body */
+      body {
+      padding-top: 0;
+      }
+
+      /* Unfloat the back to top link in footer */
+      .footer {
+      margin-left: -20px;
+      margin-right: -20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      }
+      .footer p {
+      margin-bottom: 9px;
+      }
+      }
+
+      /* Landscape phones
+      ------------------------- */
+      @media (max-width: 480px) {
+      body {
+      padding-top: 0;
+      }
+
+      /* Change up some type stuff */
+      h2 small {
+      display: block;
+      }
+
+      /* Unfloat the back to top in footer to prevent odd text wrapping */
+      .footer .pull-right {
+      float: none;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="#">Emacs Shortcuts</a>
+          <ul class="nav">
+            <li><a href="index.htm">Common</a></li>
+            <li><a href="modes/sml_mode.htm">SML Mode</a></li>
+            <li><a href="modes/html_mode.htm">HTML Mode</a></li>
+            <li class="active"><a href="about.htm">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <h1>So what's this about then?</h1>
+            <section>
+              <h2>Why?</h2>
+              <p>I've put this together largely to give me a single,
+              central <i>aide-mémoire</i> for when I'm using emacs.
+              If it helps someone else, then that's great.</p>
+              <p>The site is on github, so you can of course fork
+              it.If you do then please feel free to send me pull
+              requests if you add more content, or enhance the
+              site.</p>
+              <p>I used twitter bootstrap to put this together, along
+              with a large lump of their docs.css. I know there is a
+              backlash against the crude use of twitter bootstrap. I
+              get that. Given time I may pimp the site a bit. More
+              likely though I'll do something else that I find more
+              rewarding. If anyone wants to give the site a better,
+              more unique, look then like I mentioned above, pull
+              requests will always be looked at.</p>
+            </section>
+            <section>
+              <h2>Who?</h2>
+              <p>This site has been put together by me, Neil Robbins.
+              I occasionally blog at <a href="http://blog.semeosis.com/">http://blog.semeosis.com/</a> as time, interest, and
+              NDAs allow. You can also reach out to me via my twitter
+              account <a>@neilrobbins</a>.</p>
+            </section>
+            <section>
+              <h2>What?</h2>
+              <p>I'm using GNU Emacs 23.4.1 (x86_64-apple-darwin, NS
+              apple-appkit-1038.36) of 2012-01-29 on
+              bob.porkrind.org. So that's what I've cared about. Most
+              everything ought to work on most every version, but if
+              it doesn't, and you're not using this version, then
+              that might be a starting point for why. Or it might
+              not, such are the vagueries that the immensely
+              configurable system like emacs can introduce. </p>
+            </section>
+            <section>
+              <h2>Credit where it's due</h2>
+              <p>Lots of sites carry the information found on this
+              one, and everything I've put here I've read somewhere
+              else first. Some of them are listed below.</p>
+              <ul>
+                <li><a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/">The
+                emacs manual</a></li>
+                <li><a href="http://www.quora.com/Emacs-Tips">Emacs
+                tips at Quora</a></li>
+                <li><a href="http://shop.oreilly.com/product/9780596006488.do">Learning
+                GNU Emacs, 3rd Edition (book).</a></li>
+                <li><a href="http://www.smlnj.org/doc/Emacs/sml-mode.html">Information
+                on SML mode.</a></li>
+                <li><a href="http://alleystoughton.us/sml/sml-emacs.html">More
+                information on SML mode.</a></li>
+              </ul>
+            </section>
+          </div>
+        </div><!--/row-fluid-->
+      </div><!--/.fluid-container-->
+      <footer>
+        <div class="container">
+          <br/>
+          <div class="row">
+            <div class="span1">
+              <g:plusone></g:plusone>
+            </div>
+            <div class="span1">
+              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://neilrobbins.github.com/emacs_shortcuts/"
+                 data-text="Handy emacs shortcuts here"
+                 data-hashtags="emacs">Tweet</a>
+            </div>
+            <div class="fb-like span1"
+                 data-href="http://neilrobbins.github.com/emacs_shortcuts/"
+                 data-send="false" data-layout="button_count"
+                 data-width="450" data-show-faces="true">
+            </div>
+            <div class="span1">
+              <script type="IN/Share" data-counter="right">
+              </script>
+            </div>
+          </div> <!--/.row-fluid-->
+          <div class="span12">
+            <br/>
+            <p>Shared with you by <a href="http://blog.semeosis.com">Neil
+                Robbins</a>, with an obviously large lump
+                of <a href="http://twitter.github.com/bootstrap/index.html">Twitter Bootstrap</a>.</p>
+            <p>
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                <img alt="Creative Commons License" style="border-width:0"
+                     src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png"/>
+              </a>
+              Licensed under a <a rel="license"
+                                  href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative
+                Commons Attribution-ShareAlike 3.0 Unported License</a>.
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Place this tag after the last +1 button tag. -->
+    <script type="text/javascript">
+      window.___gcfg = {lang: 'en-GB'};
+      
+      (function() {
+      var po = document.createElement('script');
+      po.type = 'text/javascript';
+      po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    <!-- Le javascript
+         ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster
+      -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+    <script src="assets/js/application.js"></script>
+  </body>
+</html>
